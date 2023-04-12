@@ -1,4 +1,5 @@
 # 5.—áŠOˆ—
+
 **—áŠOˆ—‚Æ‚ÍƒvƒƒOƒ‰ƒ€‚ÌÀs’†‚É‘z’èŠO‚Ì–‘Ô‚â–Û‚ª”­¶‚µ‚½‚Æ‚«‚ÉA‚»‚Ì‘Î‰‚ğ‹Lq‚µ‚½ƒR[ƒh‚Ì‚±‚Æ‚Å‚·**
 ‚±‚ê‚ğs‚¤–‚ÅƒvƒƒOƒ‰ƒ€‚ÌˆÀ‘S«‚ğ‚‚ß‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·
 
@@ -12,8 +13,8 @@ Java‚Ì—áŠO‚Í**ThrowableƒNƒ‰ƒX**‚ğŒp³‚µ‚½**ErrorƒNƒ‰ƒX**‚ÆA**ExceptionƒNƒ‰ƒX**‚
 + **ExceptionƒNƒ‰ƒX**‚ÍA**ƒvƒƒOƒ‰ƒ€‚Å‘Îˆ‚Å‚«‚é‰Â”\«‚Ì‚ ‚éƒGƒ‰[**‚ğ•\‚µ‚Ü‚·B
 —á‚¦‚ÎAIOException‚âNullPointerException‚È‚Ç‚ª‚ ‚è‚Ü‚·
 
-
 **ExceptionƒNƒ‰ƒX**‚Í‚³‚ç‚ÉA**ŒŸ¸—áŠO**‚Æ**”ñŒŸ¸—áŠO**‚É•ª‚¯‚ç‚ê‚Ü‚·B
+
 + **ŒŸ¸—áŠO**‚Í**ƒRƒ“ƒpƒCƒ‹‚Éƒ`ƒFƒbƒN‚³‚ê‚é—áŠO**‚ÅAtry-catch•¶‚âthrowséŒ¾‚Åˆ—‚µ‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB
 + **”ñŒŸ¸—áŠO**‚Í**ƒRƒ“ƒpƒCƒ‹‚Éƒ`ƒFƒbƒN‚³‚ê‚È‚¢—áŠO**‚ÅARuntimeExceptionƒNƒ‰ƒX‚ÌƒTƒuƒNƒ‰ƒX‚Å‚·
 
@@ -23,7 +24,6 @@ Java‚Ì—áŠO‚Í**ThrowableƒNƒ‰ƒX**‚ğŒp³‚µ‚½**ErrorƒNƒ‰ƒX**‚ÆA**ExceptionƒNƒ‰ƒX**‚
 |IOException|ƒtƒ@ƒCƒ‹“üo—Í‚ÉŠÖ‚·‚éƒGƒ‰[‚ª”­¶‚·‚éƒP[ƒX|
 |SQLException| ƒf[ƒ^ƒx[ƒX‘€ì‚ÉŠÖ‚·‚éƒGƒ‰[‚ª”­¶‚·‚éƒP[ƒX|
 
-
 **‚æ‚­g‚í‚ê‚é”ñŒŸ¸—áŠO**
 | —áŠO | “Š‚°‚éƒP[ƒX |
 | ----|----|
@@ -32,17 +32,21 @@ Java‚Ì—áŠO‚Í**ThrowableƒNƒ‰ƒX**‚ğŒp³‚µ‚½**ErrorƒNƒ‰ƒX**‚ÆA**ExceptionƒNƒ‰ƒX**‚
 |IndexOutOfBoundsException|”z—ñ‚âƒŠƒXƒg‚È‚Ç‚ÌƒRƒŒƒNƒVƒ‡ƒ“‚©‚ç”ÍˆÍŠO‚Ì—v‘f‚ğæ“¾‚µ‚æ‚¤‚·‚éƒP[ƒX|
 |ArithmeticException| Zp‰‰Z‚Å•s³‚È’l‚ª”­¶‚µ‚½ƒP[ƒX|
 
+## 5.1. throw
 
-
-## 5.1. throw 
 **throw‚Æ‚ÍAƒGƒ‰[‚ğ”­¶‚³‚¹‚é‚½‚ß‚ÌƒL[ƒ[ƒh‚Å‚·B**
 —áŠOƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ğì¬‚µ‚Ä`throw`‚·‚é‚±‚Æ‚ÅAƒGƒ‰[‚ğ•\Œ»‚Å‚«‚Ü‚·B
+
 ~~~java
 throw new —áŠOƒNƒ‰ƒX(ƒƒbƒZ[ƒW);
 ~~~
+
 ***
+
 ## 5.2. try catch
+
 **try-catch‚Æ‚ÍAƒGƒ‰[‚ª”­¶‚·‚é‰Â”\«‚Ì‚ ‚éƒR[ƒhƒuƒƒbƒN‚ğtry‚ÅˆÍ‚İAcatch‚Ì’†‚ÅƒGƒ‰[‚ª”­¶‚µ‚½ê‡‚És‚¢‚½‚¢ˆ—‚ğs‚¤ˆ×‚Ì•¶‚Å‚·**
+
 ~~~java
 try {
   // —áŠO‚ª”­¶‚·‚é‰Â”\«‚Ì‚ ‚éˆ—
@@ -58,10 +62,12 @@ try {
     //•K‚¸Às‚³‚ê‚éˆ—
 }
 ~~~
+
 `try`ƒuƒƒbƒN‚É‚Í—áŠO‚ª”­¶‚·‚é‰Â”\«‚Ì‚ ‚éƒR[ƒh‚ğ‹Lq‚µA
 `catch`ƒuƒƒbƒN‚É‚Í—áŠO‚ª”­¶‚µ‚½‚Æ‚«‚ÉÀs‚·‚éƒR[ƒh‚ğ‹Lq‚µ‚Ä‚¢‚Ü‚·B
 `finally`ƒuƒƒbƒN‚É‚ÍAÅŒã‚É•K‚¸Às‚·‚éƒR[ƒh‚ğ‹Lq‚µ‚Ä‚¢‚Ü‚·B
 ‚±‚ê‚ç‚ÌƒuƒƒbƒN‚ÍAƒvƒƒOƒ‰ƒ€‚ÌˆÀ‘S«‚â‰Â“Ç«‚ğ‚‚ß‚é‚½‚ß‚Éd—v‚Å‚·
+
 ~~~java
 int person = 0;
 int candy = 100;
@@ -75,27 +81,32 @@ try {
     System.out.println("person : " + person);
 }
 ~~~
+
 ~~~java
 ÀsŒ‹‰ÊF
 —áŠO‚ª”­¶‚µ‚Ü‚µ‚½
 java.lang.ArithmeticException: / by zero
 person : 0
 ~~~
+
 ã‹L‚ÌƒR[ƒh‚ğŒ©‚Ä‚İ‚Ü‚µ‚å‚¤B
 •Ï”`candy`‚É`100 / 0`‚ğ“ü‚ê‚æ‚¤‚Æ‚µ‚Ä‚¢‚Ü‚·‚ËB”Šw‚É‚¨‚¢‚Ä0‚ÅŠ„‚Á‚Ä‚Í‚¢‚¯‚È‚¢‚Æ‚¢‚¤ƒ‹[ƒ‹‚ª‚ ‚éˆ×A`100/0`‚ğ‚µ‚æ‚¤‚Æ‚·‚é‚ÆƒGƒ‰[‚ª‹N‚«‚Ä‚µ‚Ü‚¢‚Ü‚·B
 ‚»‚±‚ÅAƒGƒ‰[‚Ì‰Â”\«‚ª‚ ‚é`candy = 100 / person`‚ğ`try`‚ÅˆÍ‚İA`catch`‚ÉƒGƒ‰[‚ª‹N‚«‚Ä‚µ‚Ü‚Á‚½‚Ìˆ—‚ğ‘‚«‚Ü‚·Bã‹L‚ÌƒR[ƒh‚Å‚ÍƒGƒ‰[‚ª‹N‚«‚½‚ÉƒXƒ[‚³‚ê‚½`java.lang.ArithmeticException: / by zero`‚Æ‚¢‚¤—áŠO‚ğo—Í‚µ‚Ä‚¢‚Ü‚·B
 `finally`‚ÅˆÍ‚Ü‚ê‚½ˆ—‚Í—áŠO‚ª”­¶‚µ‚Ä‚à‚µ‚È‚­‚Ä‚à•K‚¸Às‚³‚ê‚Ü‚·Bå‚Éƒtƒ@ƒCƒ‹‚ğclose‚µ‚½‚¢‚È‚Ç‚Ég‚í‚ê‚Ü‚·B
 
-
 ## 5.3. throws
+
 **throws‚ÍAƒƒ\ƒbƒh‚ÌéŒ¾‚ÌŒã‚É‹Lq‚·‚éƒL[ƒ[ƒh‚ÅA‚»‚Ìƒƒ\ƒbƒh‚ª”­¶‚³‚¹‚é‰Â”\«‚Ì‚ ‚é—áŠO‚ğ—ñ‹“‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B**
 `throws`‚ğg‚¤‚ÆA‚»‚Ìƒƒ\ƒbƒh‚ğŒÄ‚Ño‚·‘¤‚É—áŠOˆ—‚ğ”C‚¹‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+
 ~~~java
 void something() throws Exception {
   // —áŠO‚ª”­¶‚·‚é‰Â”\«‚Ì‚ ‚éƒR[ƒh
 }
 ~~~
+
 ‚Ü‚½A`throws`ƒL[ƒ[ƒh‚Í•¡”‘‚¯‚Ü‚·Bƒƒ\ƒbƒh‚ª”­¶‚³‚¹‚é‰Â”\«‚Ì‚ ‚é—áŠO‚Ìí—Ş‚ª•¡”‚ ‚éê‡‚ÍAƒJƒ“ƒ}`,`‚Å‹æØ‚Á‚Ä—ñ‹“‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·
+
 ~~~java
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -118,13 +129,16 @@ public class Main {
     }   
 }
 ~~~
+
 ã‹L‚ÌƒR[ƒh‚Ímainƒƒ\ƒbƒh‚©‚ç`readFile`ƒƒ\ƒbƒh‚Å`FileReader`ƒNƒ‰ƒX‚ğg—p‚µ‚Ä‚¢‚é‚Ì‚ÅƒGƒ‰[ˆ—‚ğÀ{‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
 
 —áŠOˆ—‚Í`throws`‚ğg‚Á‚ÄŒÄ‚Ño‚µŒ³‚ÌƒNƒ‰ƒX‚É“Š‚°‚Ä‚¢‚Ü‚·B
 throws‚ÅŒÄ‚Ño‚µŒ³‚ÌƒNƒ‰ƒX‚É—áŠOˆ—‚ğ“Š‚°‚½Œã‚Ìˆ—‚Í’†~‚³‚êA—áŠOˆ—‚ğmainƒƒ\ƒbƒh‚Åcatch‚µ‚Ä‚»‚ÌŒãˆ—‚ğ‚µ‚Ä‚¢‚Ü‚·B
 
 ## 5.4. —áŠO‚Ì“Ç‚İ•û
+
 `Main.java`‚ÅˆÈ‰º‚ÌƒR[ƒh‚ğÀs‚µ‚æ‚¤‚Æ‚·‚é‚ÆƒGƒ‰[‚ª“Š‚°‚ç‚ê‚Ü‚·B
+
 ~~~java
 public class Main {
     public static void main(String[] args) {
@@ -133,13 +147,15 @@ public class Main {
     }
 }
 ~~~
+
 ~~~java
 ÀsŒ‹‰ÊF
 Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "str" is null at Main.main(Main.java:4)
 ~~~
+
 ã‹L‚ÌƒR[ƒh‚ÍA•¶š—ñ`str`‚Ì’·‚³‚ğo‚·`.length()`ƒƒ\ƒbƒh‚ğŒÄ‚Ño‚»‚¤‚Æ‚µ‚Ä‚¢‚Ü‚·‚ªA`str`‚ª`null`‚È‚Ì‚ÅAƒGƒ‰[‚ªo‚Ä‚µ‚Ü‚Á‚Ä‚¢‚Ü‚·B
 
-`Exception in thread "main" java.lang.NullPointerException: ~~ `
+`Exception in thread "main" java.lang.NullPointerException: ~~`
 ‚±‚Ì•”•ª‚Å‚Í`NullPointerException`‚Æ‚¢‚¤ƒGƒ‰[‚Ì“à—e‚ª‚í‚©‚è‚Ü‚·B
 `at Main.main(Main.java:4)`
 Ÿ‚ÉA‚±‚Ì•”•ª‚Å‚ÍƒGƒ‰[‚ª‹N‚«‚½‰ÓŠ‚ğ–¾¦‚µ‚Ä‚¢‚Ü‚·BƒTƒ“ƒvƒ‹‚Ìê‡‚¾‚ÆA
@@ -150,4 +166,3 @@ Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String
 ``at ƒNƒ‰ƒX–¼.ƒƒ\ƒbƒh–¼(ƒtƒ@ƒCƒ‹–¼.java: ƒGƒ‰[‚ª‹N‚«‚½s)``
 
 ``at ƒpƒbƒP[ƒW–¼.ƒNƒ‰ƒX–¼.ƒƒ\ƒbƒh–¼(ƒtƒ@ƒCƒ‹–¼.java: ƒGƒ‰[‚ª‹N‚«‚½s)``
-

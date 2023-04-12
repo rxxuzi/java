@@ -4,8 +4,11 @@
 演算子には**算術演算子, 論理演算子, 比較演算子, 代入演算子, ビット演算子**の5つがあります
 
 ***
+
 ## 2.1 演算子の種類
+
 ### 算術演算子
+
 算術演算子は数値を取り扱うときに使う演算子です
 |演算子|記入例 | 説明|
 |---|---| ---|
@@ -22,6 +25,7 @@
 変数の前に置く事を前置と言い、変数の後ろに置く事を後置と言います
 
 サンプルコード:
+
 ~~~java
 int a = 1 + 3; // a = 4
 int b = 4 - 2; // b = 2
@@ -35,7 +39,9 @@ System.out.println(f); //6
 ~~~
 
 ***
+
 ### 論理演算子
+
 論理演算子はboolean型の値に対する操作を行う演算子です。
 **必ずboolean型の値を返します。**
 |演算子|記入例 | 説明|
@@ -44,6 +50,7 @@ System.out.println(f); //6
 |&&| x && y | xとyの両方がtrueの場合にtrueを返す|
 | \|\|| x \|\| y | xとyのいずれかがtrueの場合にtrueを返す|
 サンプルコード:
+
 ~~~java
 boolean x = true;
 boolean y = true;
@@ -57,7 +64,9 @@ System.out.println(x || z); //true
 ~~~
 
 ***
+
 ### 比較演算子
+
 |演算子|記入例 | 説明|
 |---|---| ---|
 |==| x == y | xとyが等しい場合にtrueを返す|
@@ -68,6 +77,7 @@ System.out.println(x || z); //true
 |<=| x <= y| xがyよりも小さいか等しい場合にtrueを返す|
 
 サンプルコード:
+
 ~~~java
 System.out.println(1 == 1); //true
 System.out.println(1 == 2); //false
@@ -77,8 +87,11 @@ System.out.println(1 <  2); //true
 System.out.println(1 <= 1); //true
 System.out.println(0 >= 1); //false
 ~~~
+
 ***
+
 ### 代入演算子
+
 |演算子|記入例 | 説明|
 |---|---| ---|
 |= | x = 100 | xに100を代入 |
@@ -88,6 +101,7 @@ System.out.println(0 >= 1); //false
 |/=| x += 4  | xにx/4の値を代入|
 
 サンプルコード:
+
 ~~~java
 int a = 100;
 System.out.println(a); // 100
@@ -96,8 +110,11 @@ System.out.println(a); // 200
 a += 50;
 System.out.println(a); // 250
 ~~~
+
 ***
+
 ### ビット演算子
+
 |演算子|記入例 | 説明|
 |---|---| ---|
 |& | x & y | xとyのビットAND |
@@ -106,6 +123,7 @@ System.out.println(a); // 250
 |~ | ~x  | xのビットを反転させる |
 
 サンプルコード:
+
 ~~~java
 int a = 0b00011; // 3
 int b = 0b01010; //10
@@ -118,7 +136,9 @@ System.out.println(~a);    //-4
 ~~~
 
 ***
+
 ## 2.2. 演算子の優先順位
+
 上から優先されます
 
 1. `X++` `X--` 後置インクリメント/デクリメント
@@ -150,11 +170,13 @@ System.out.println(~a);    //-4
 14. 代入演算子全般
 
 また、`()`の中身から優先されます。
+
 ~~~java
 System.out.println(3 + 1 * 2);
 System.out.println(5.0 / 4.0 >= 2);
 System.out.println((10 + 20) / 5);
 ~~~
+
 ~~~java
 実行結果：
 5
