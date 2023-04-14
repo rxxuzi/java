@@ -23,7 +23,6 @@ public class Example {
     public static void main(String[] args) {
         // Listの作成
         List<String> language = new ArrayList<String>();
-
         // 要素の追加
         language.add("java");
         language.add("c++");
@@ -64,7 +63,6 @@ Hello scala
 
 ~~~
 
-
 宣言の仕方
 
 ~~~java
@@ -74,6 +72,8 @@ List<String> list = new ArrayList<String>();
 
 上記の例では、Listはインターフェースであり、ArrayListはListインターフェースを実装した**クラス**です。`<String>`は、**Listに格納される要素の型**を示しています。
 この場合、文字列を格納するために`String`を使用しています。
+
+---
 
 ## 9.2. Set
 
@@ -95,26 +95,87 @@ public class Example {
         // Setの作成
         Set<String> set = new HashSet<String>();
 
-        // 要素の追加
-        set.add("apple");
-        set.add("banana");
-        set.add("orange");
-
+        // 要素の追加 (要素数 = 4)
+        set.add("java");
+        set.add("c++");
+        set.add("python");
+        set.add("html");
+        
         // 要素の取得
-        boolean contains = set.contains("banana");  // true
+        String element = "c++";
+        boolean contains = set.contains(element);  // true
+        if(contains) { //true
+            System.out.println("Elements include");
+        }
 
         // 要素の削除
-        set.remove("orange");
+        set.remove("python");
 
         // 要素の数を取得
-        int size = set.size();  // 2
-
-        // 要素のループ
-        for (String s : set) {
-            System.out.println(s);
+        int size = set.size();  // removeしたので3
+        System.out.println(size);
+        
+        boolean isE = set.isEmpty(); //false
+        
+        if(!isE) { // !false -> true
+            // 要素のループ(拡張for文)
+            for (String s : set) {
+                System.out.println(s);
+            }
         }
-        // "apple"
-        // "banana"
+        
+    }
+}
+
+~~~
+
+~~~text
+Elements include
+3
+c++
+java
+html
+
+~~~
+
+---
+
+## 9.3. Map
+
+Javaの`Map`は、キーと値のペアを格納するデータ構造であり、キーを使って値にアクセスすることができます。
+`Map`は、`java.utilパッケージ`に含まれるクラスであり、`HashMap`、`TreeMap`、`LinkedHashMap`などがあります。
+それぞれのクラスには、`Mapインターフェース`を実装しているため、同じような方法で使用することができます。
+
+以下は`HashMap`を使用したMapの例です。HashMapは、**キーと値の追加、取得、削除が高速に行えます。**
+
+~~~java
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Example {
+    public static void main(String[] args) {
+        // Mapの作成
+        Map<String, Integer> map = new HashMap<String, Integer>();
+
+        // 要素の追加
+        map.put("A", 100);
+        map.put("B", 200);
+        map.put("C", 300);
+
+        // 要素の取得
+        int value = map.get("A");  // 100
+
+        // 要素の削除
+        map.remove("B");
+
+        // 要素の数を取得
+        int size = map.size();  // 2
+
+        // キーのループ
+        for (String key : map.keySet()) {
+            System.out.println(key + " : " + map.get(key));
+        }
     }
 }
 
