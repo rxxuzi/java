@@ -2,14 +2,41 @@
 
 List, Set, Mapについて説明します
 
++ `List`は、要素を順番に保存していくデータ構造です。
+
++ `Set`は要素の重複を許さないデータ構造です。
+
++ `Map`はキーと呼ばれる要素とそのキーに対応した値を保存するためのデータ構造です
+
 ## 9.1. List
 
-Javaにおいて`List`は、複数の要素を保持することができるオブジェクトです。
 `List`は、配列に似たデータ構造で、**動的**に要素数を変更することができます。
 `List`に格納される要素は、インデックスによってアクセスすることができます。
 
-Listは、`java.utilパッケージ`に属しているので、使用する際にはインポートする必要があります。``List``には`ArrayList`、`LinkedList`、`Vector`などのクラスが実装されています。
+Listは、`java.utilパッケージ`に属しているので、使用する際にはインポートする必要があります。
+``List``には`ArrayList`、`LinkedList`などのクラスが実装されています。
+
++ ArrayList
+    内部的に配列を使用したリストの実装クラス
+    リスト中の要素へのアクセス処理を高速で行うことができる
+    要素の追加や削除にコストが掛かる
+
++ LinkedList
+    内部的に連結リストを使用したリストの実装クラス
+    要素へのアクセス処理はコストが高い
+    要素の追加や削除の処理は高速で行うことができる
+
 それぞれのクラスには、`Listインターフェース`を実装しているため、同じような方法で使用することができます。
+
+リストオブジェクトを作成するには以下のように宣言します
+
+~~~java
+new オブジェクト名<ジェネリクス>();
+
+//例
+new ArrayList<Integer>();
+new LinkedList<String>();
+~~~
 
 以下は、`ArrayList`を使用したListの例です。
 ArrayListは、**可変長の配列として実装されており**、**要素の追加や削除が高速に行えます。**
@@ -77,7 +104,6 @@ List<String> list = new ArrayList<String>();
 
 ## 9.2. Set
 
-Javaにおいて`Set`は、重複のない一意な要素のコレクションを表すためのデータ構造です。
 `Set`は、集合論の概念に基づいており、要素の順序は保証されません。
 また、`Set`は、要素の重複を許可しないため、同じ値を複数回格納することはできません。
 
@@ -92,7 +118,7 @@ import java.util.Set;
 
 public class Example {
     public static void main(String[] args) {
-        // Setの作成
+        // 宣言
         Set<String> set = new HashSet<String>();
 
         // 要素の追加 (要素数 = 4)
@@ -105,7 +131,9 @@ public class Example {
         String element = "c++";
         boolean contains = set.contains(element);  // true
         if(contains) { //true
-            System.out.println("Elements include");
+            System.out.println(element + " is included in the set");
+        }else{
+            System.out.println(element + " is not included in the set");
         }
 
         // 要素の削除
@@ -130,7 +158,7 @@ public class Example {
 ~~~
 
 ~~~text
-Elements include
+c++ is included in the set
 3
 c++
 java
@@ -155,7 +183,7 @@ import java.util.Map;
 
 public class Example {
     public static void main(String[] args) {
-        // Mapの作成
+        // 宣言
         Map<String, Integer> map = new HashMap<String, Integer>();
 
         // 要素の追加

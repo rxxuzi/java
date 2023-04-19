@@ -3,23 +3,28 @@
 制御文はプログラムの動きをコントロールするためのものです
 
 ---
+
 ## 3.1 if文
-~~~java 
+
+~~~java
 if(条件){
     処理1;
 }else{
     処理2;
 }
 ~~~
+
 if文を使うとある**条件が満たされているかどうかによって処理を分岐させることができます**。
 条件が満たされていれば処理1を行い、条件が満たされていなければ処理2を行います。
-~~~java 
+
+~~~java
 if(条件1){
     処理1;
 }else if(条件2){
     処理2;
 }
 ~~~
+
 `else if`は最初の条件が満たされていない場合、別のある条件(ここでは条件2)が満たされている場合、処理を行うことができます。
 また、if文の条件部分には`boolean型`を返す式を書きます。この真偽値によって実行される文を切り替えることができます。
 
@@ -47,14 +52,18 @@ if(x > y){
     System.out.println("xはyより小さいです");
 }
 ~~~
+
 ~~~
 実行結果:
 resultはtrueです
 xは5より小さいです
 xはyより等しいです
 ~~~
+
 ***
+
 ## 3.2. switch文
+
 ~~~java
 swicth(式){
     case 値1:
@@ -71,17 +80,20 @@ swicth(式){
         break;
 }
 ~~~
+
 switch文は処理を**値**で分岐させることができます。
 switch文でマッチすることができる値の型は以下の通りです
+
 + char
 + byte
 + short
-+ int 
++ int
 + Integer
 + String
 
 `default:`はswitch文に送られた整数が`case`のどの値とも一致しなかったときに処理されます。
 また、caseの最後に`break;`を記述しない場合、次の`case`の中も処理してしまいます。
+
 ~~~java
 int medal = 2;
 switch(medal){
@@ -99,27 +111,32 @@ switch(medal){
         break;
 }
 ~~~
+
 ~~~
 実行結果:
 Silver
 ~~~
+
 上記のコードでは変数`medal`の値によって出力を変えています。
 サンプルコードでは`medal = 2`なので、`case 2`の中の`System.out.println("Silver");`の処理を行います
 
 #### <span style="color: red; ">NullPointerException</span>
-switch文でマッチさせる値が`Null`だった場合、`NullPointerException`が投げられます。
 
+switch文でマッチさせる値が`Null`だった場合、`NullPointerException`が投げられます。
 
 ***
 
 ## 3.3. 三項演算子
+
 ```java
 条件式 ? マッチした場合の値 : マッチしなかった場合の値;
 ```
+
 三項演算子はマッチするかどうかを判定する条件式とマッチした場合の値、マッチしなかった場合の値を指定する演算子です。
 if-else文を簡略化した記述方法です。
 
 if-else文を用いたコード:
+
 ```java
 int a ;
 int b = 20
@@ -130,17 +147,20 @@ if(b > 15){
 }
 System.out.println(a);
 ```
+
 ~~~java
 実行結果：
 10
 ~~~
 
 三項演算子を用いたコード:
+
 ```java
 int b = 20
 int a = b > 15 ? 10 : -10;
 System.out.println(a);
 ```
+
 ~~~java
 実行結果：
 10
