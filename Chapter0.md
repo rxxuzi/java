@@ -1,14 +1,14 @@
-# 0. �͂��߂�
+# 0. はじめに
 
-���̃e�L�X�g��java�ɏ����ł��������������l���C�y�ɐG�����悤�ɂ����e�L�X�g�ł�
-����C�����G�ꂽ���Ƃ�����l��A�d�Z�e�L�X�g��ǔj�����l�Ȃ瑽���]�T�ł��B
+このテキストはjavaに少しでも興味を持った人が気軽に触れられるようにしたテキストです
+少しC言語を触れたことがある人や、電算テキストを読破した人なら多分余裕です。
 
 ***
 
 ## 0.1. Hello World
 
-�܂���java�𓮂����Ă݂܂��傤
-�܂�```Main.java```�Ƃ����t�@�C��������āA����``Main.java``�̃t�@�C���̒��Ɏ��̃R�[�h�������Ă݂܂��傤
+まずはjavaを動かしてみましょう
+まず```Main.java```というファイルを作って、その``Main.java``のファイルの中に次のコードを書いてみましょう
 
 ~~~java
 class Main{
@@ -18,20 +18,20 @@ class Main{
 }
 ~~~
 
-���ɐ�قǏ������R�[�h���R���p�C������ƁA�R�}���h���C����
+次に先ほど書いたコードをコンパイルすると、コマンドラインに
 
 ~~~text
 Hello World
 ~~~
 
-�Ǝ��s���ʂ��o��Ǝv���܂��B
-���ꂪ��������Ƃ���java�ł�Hello World�̂����ɂȂ�܂��B
+と実行結果が出ると思います。
+これがざっくりとしたjavaでのHello Worldのやり方になります。
 ***
 
-## 0.2. �\��
+## 0.2. 構造
 
-���̍��ł͐�قǏ������R�[�h�̈Ӗ���������Ă��������Ǝv���܂��B
-`package`�ɂ��Ă͌�قǐ������܂��B
+この項では先ほど書いたコードの意味を説明していきたいと思います。
+`package`については後ほど説明します。
 
 ~~~java
 class Main{
@@ -39,31 +39,31 @@ class Main{
 }
 ~~~
 
-����``class ���O{}``�ň͂܂ꂽ�����̎���**�N���X**�Ƃ����܂��B
+この``class 名前{}``で囲まれた部分の事を**クラス**といいます。
 
 ~~~java
-public static void main(String args[]){
+public static void main(String[] args){
     
 }
 ~~~
 
-����``public static ~``�ň͂܂ꂽ������**���\�b�h**�Ƃ����A
-���\�b�h�ň͂܂ꂽ�����ɂ�肽�������������܂�
-*���̌�̓��e�ł̓N���X�����ƃ��\�b�h�����͏ȗ����܂��B
+次に``public static ~``で囲まれた部分を**メソッド**といい、
+メソッドで囲まれた部分にやりたい処理を書きます
+*この後の内容ではクラス部分とメソッド部分は省略します。
 
-��L�̃R�[�h�ł�``System.out.println("Hello World");``�������ɂ�����܂�
-�܂��A�R�[�h�̒��� ``//``�ƃo�b�N�X���b�V����2����邱�Ƃɂ���āA**�R�����g**���邱�Ƃ��ł��܂��B
-(�R�����g�Ƃ̓v���O�����ɉe����^�����ɂ����钍�߂̂��Ƃł�)
+上記のコードでは``System.out.println("Hello World");``が処理にあたります
+また、コードの中で ``//``とバックスラッシュを2つ入れることによって、**コメント**することができます。
+(コメントとはプログラムに影響を与えずにかける注釈のことです)
 
-**�܂��Ajava�̌��܂�Ƃ��ĕ����ɂ͕K���Z�~�R����``;``���K�v�ƂȂ�܂�**
+**また、javaの決まりとして文末には必ずセミコロン``;``が必要となります**
 
-```System.out.println()```��``()``�̒��g���o�͂���Ƃ����Ӗ��ł��BC�����``printf()``�Ǝ����悤�ȕ��ƍl���Ă����ł��B
-()�̒��́A������ł����``""``�_�u���R�[�e�[�V�����ň͂݁A���l�Ȃ炻�̂܂ܓ���邱�Ƃ��ł��܂��B�܂��A`()`�̒��ɕ����񂪓����Ă����``+``�L�����g���ĘA�����邱�Ƃ��ł��܂��B
-������``()``�̒��ł͌v�Z�����邱�Ƃ��ł��܂��B
+```System.out.println()```は``()``の中身を出力せよという意味です。C言語の``printf()``と似たような物と考えていいです。
+()の中は、文字列であれば``""``ダブルコーテーションで囲み、数値ならそのまま入れることができます。また、`()`の中に文字列が入っていれば``+``記号を使って連結することができます。
+そして``()``の中では計算をすることができます。
 
-`System.out.print()`�ƋL�q���鎖�ŁA���s�����ɏo�͂����邱�Ƃ��ł��܂��B
+`System.out.print()`と記述する事で、改行せずに出力をすることができます。
 
-�T���v���R�[�h�F
+サンプルコード：
 
 ~~~java
 System.out.print("Hello ");
@@ -74,7 +74,7 @@ System.out.println("20" + "23");
 System.out.println(20 + 23);
 ~~~
 
-�o�́F
+出力：
 
 ~~~java
 Hello world
@@ -84,72 +84,72 @@ Number : 10
 43
 ~~~
 
-��L�̃R�[�h��5�s�ڂ�6�s�ڂ̈Ⴂ��20��23�������񂩐��l�ł��邩�̈Ⴂ�ł��B
-5�s�ڂ͐�����``""``�ň͂܂�Ă���̂ŕ�����ƂȂ�܂��B�����``()``�̒��ł͕�����̘A���Ƃ��ď�������܂��B
-6�s�ڂ͐��������̂܂܏�����Ă���̂Ő��l�����ƂȂ�܂��B�����``()``�̒��ł͐��l�̌v�Z�������s���܂��B
-���l�ƕ�����̈Ⴂ�͏�Ɉӎ����ăR�[�h�������Ă����܂��傤�B
+上記のコードの5行目と6行目の違いは20と23が文字列か数値であるかの違いです。
+5行目は数字が``""``で囲まれているので文字列となります。よって``()``の中では文字列の連結として処理されます。
+6行目は数字がそのまま書かれているので数値扱いとなります。よって``()``の中では数値の計算処理が行われます。
+数値と文字列の違いは常に意識してコードを書いていきましょう。
 ***
 
-## 0.3. main���\�b�h�̍\��
+## 0.3. mainメソッドの構造
 
-���̍���main���\�b�h�̍\���ɂ��Đ������܂��B
-~main���\�b�h�͂��܂��Ȃ��̂悤�Ȃ��̂Ȃ̂ŁA�ŏ��͂��̍\���̎�������Ȃ��Ă��ǂ��Ǝv���܂�~
+この項はmainメソッドの構造について説明します。
+~mainメソッドはおまじないのようなものなので、最初はこの構造の事をしらなくても良いと思います~
 
 ~~~java
 public static void main(String args[]){
 }
 ~~~
 
-Java�� main���\�b�h�̐錾�ł́A�����̏��������ׂĖ������Ă���K�v������܂��B
+Javaの mainメソッドの宣言では、これらの条件をすべて満たしている必要があります。
 
-+ �A�N�Z�X�C���q
-+ static�C���q
-+ �߂�l
-+ ���\�b�h��
-+ ����
++ アクセス修飾子
++ static修飾子
++ 戻り値
++ メソッド名
++ 引数
 
-### �A�N�Z�X�C���q
+### アクセス修飾子
 
 **<span style="color: red; ">public</span>** _static void main(String[] args)_
-�����͕K��``public``�ł���K�v������Apublic�̓v���O�����̌��J�͈͂��Ӗ����Ă�����Apublic�C���q��t�������\�b�h�́A���\�b�h�̒�`���̃N���X�̊O���A�O���̃R�[�h����A�N�Z�X�ł���悤�ɂȂ�܂��B
+ここは必ず``public``である必要があり、publicはプログラムの公開範囲を意味していおり、public修飾子を付けたメソッドは、メソッドの定義元のクラスの外部、外側のコードからアクセスできるようになります。
 
-### static�C���q
+### static修飾子
 
 _public_ **<span style="color: red; ">static</span>** _void main(String[] args)_
-static�C���q��t�������\�b�h�́A�N���X��**�C���X�^���X��**[^1]���邱
-�ƂȂ��A�N�Z�X�ł���悤�ɂȂ�܂��B
-static�C���q���t���Ă��郁�\�b�h�̎���ÓI���\�b�h�ƌ����܂�
+static修飾子を付けたメソッドは、クラスを**インスタンス化**[^1]するこ
+となくアクセスできるようになります。
+static修飾子が付いているメソッドの事を静的メソッドと言います
 
-### �߂�l
+### 戻り値
 
 _public static_ **<span style="color: red; ">void</span>** _main(String[] args)_
-main���\�b�h�̖߂�l�͕K��**void**[^2]�łȂ���΂Ȃ�܂���B
+mainメソッドの戻り値は必ず**void**[^2]でなければなりません。
 
-### ���\�b�h��
+### メソッド名
 
 _public static void_ **<span style="color: red; ">main</span>** _(String[] args)_
-���\�b�h���͕K���S��������`main`�łȂ���΂Ȃ�܂���B
-JVM���Q�Ƃ��鎯�ʎq�ł��B
+メソッド名は必ず全小文字の`main`でなければなりません。
+JVMが参照する識別子です。
 
-### ����
+### 引数
 
 _public static void main_ **<span style="color: red; ">(String[] args)</span>**
-���\�b�h�̈����ɂ�`String�^�̔z��`�A�܂���`String�^�̉ϒ�����`�ł��邱�Ƃ��K�v�ł��B
-�܂��A`args`�̓v���O���������s�����Ƃ��ɓn���������Ӗ����Ă��܂��B
+メソッドの引数には`String型の配列`、または`String型の可変長引数`であることが必要です。
+また、`args`はプログラムが実行されるときに渡される情報を意味しています。
 ***
 
-## 0.4. java�t�@�C����class�t�@�C��
+## 0.4. javaファイルとclassファイル
 
-�O�̍���`Main.java`����`helloworld`�����s�����Ǝv���܂����A�R���p�C���������ۂ�`Main.java`���쐬�����t�H���_�̒���`Main.class`���쐬���ꂽ���Ǝv���܂��BJava�̃v���O���������s���邽�߂ɕK�v�ȏ���������ł��B
-**Java��<span style="color: #ff00ff; ">�I�u�W�F�N�g�w���v���O���~���O����</span>�ŁA�I�u�W�F�N�g�Ƃ������̂��`���Ďg���܂��B�I�u�W�F�N�g��class�Œ�`����܂��B**
+前の項で`Main.java`内で`helloworld`を実行したと思いますが、コンパイルをした際に`Main.java`を作成したフォルダの中に`Main.class`が作成されたかと思います。Javaのプログラムを実行するために必要な処理だからです。
+**Javaは<span style="color: #ff00ff; ">オブジェクト指向プログラミング言語</span>で、オブジェクトというものを定義して使います。オブジェクトはclassで定義されます。**
 
 ***
-**Java�̃v���O���~���O�̊�{�I�ȗ���͈ȉ��̂悤�ɂȂ�܂��B**
+**Javaのプログラミングの基本的な流れは以下のようになります。**
 
-1. �\�[�X�t�@�C���i`.java`�j���쐬����
-2. �R���p�C���i`javac`�j���g���ă\�[�X�t�@�C�����o�C�g�R�[�h�i`.class`�j�ɕϊ�����
-3. JVM[^3]���g���ăo�C�g�R�[�h(`.class`)�����s����
+1. ソースファイル（`.java`）を作成する
+2. コンパイラ（`javac`）を使ってソースファイルをバイトコード（`.class`）に変換する
+3. JVM[^3]を使ってバイトコード(`.class`)を実行する
 
-[^1]: new���Z�q�Ȃǂ��g���C���X�^���X�𐶐����邱��
-[^2]: ���\�b�h�̏������ʂ��Ăяo�����֕Ԃ��K�v���Ȃ��ꍇ�ɂ���߂�l�̌^
-[^3]: JavaVirtualMachine�̗��ŁAJava�ō쐬���ꂽ�A�v���P�[�V������Windows��MacOS�Ȃǂœ��������߂ɕK�v�ƂȂ�A�v���P�[�V����
+[^1]: new演算子などを使いインスタンスを生成すること
+[^2]: メソッドの処理結果を呼び出し元へ返す必要がない場合につける戻り値の型
+[^3]: JavaVirtualMachineの略で、Javaで作成されたアプリケーションをWindowsやMacOSなどで動かすために必要となるアプリケーション
