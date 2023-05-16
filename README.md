@@ -14,6 +14,6 @@ Chapter 10以降は比較的難しい内容となっています
 + Chpater 8 メソッドとクラスとパッケージ
 + Chpater 9 コレクション
 + Chapter 10 継承
-+ Chapter 11 インターフェース 
++ Chapter 11 インターフェースと抽象クラス
 + Chapter 12 ガーベッジコレクション
 + Chapter 13 スレッド
