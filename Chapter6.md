@@ -1,26 +1,26 @@
-# 6�@�z��
+# 6　配列
 
-**�z��Ƃ́A�����^�̗v�f�𕡐��܂Ƃ߂Ĉ������Ƃ̂ł���f�[�^�\���ł��B**
+**配列とは、同じ型の要素を複数まとめて扱うことのできるデータ構造です。**
 
-## 6.1.�@��`, �錾
+## 6.1.　定義, 宣言
 
 ~~~java
-�v�f�^[] �ϐ��� = new �v�f�^[�z��T�C�Y];
-�v�f�^[] �ϐ��� = new �v�f�^[]{�v�f0,�v�f1,�v�f2....};
+要素型[] 変数名 = new 要素型[配列サイズ];
+要素型[] 変数名 = new 要素型[]{要素0,要素1,要素2....};
 ~~~
 
-�z��Ɋ܂܂��v�f��0���珇�Ԃɕ��ׂ��Ă��܂��B���̔ԍ���**�C���f�b�N�X**�Ƃ����܂��B���̃C���f�b�N�X��p���Ĕz�񒆂̗v�f�̎擾��X�V���s���܂��B�����A**�z��̃T�C�Y�͈�x��������ƌォ��ύX���邱�Ƃ��ł��܂���**
+配列に含まれる要素は0から順番に並べられています。この番号を**インデックス**といいます。このインデックスを用いて配列中の要素の取得や更新を行います。ただ、**配列のサイズは一度生成すると後から変更することができません**
 
-�܂��A���ׂĂ̗v�f�͓����^�ł���K�v������܂��B
-�z��̗v�f�̌^�́A**��{�f�[�^�^�ƎQ�ƌ^�ǂ�����g�����Ƃ��ł��܂�**�B
+また、すべての要素は同じ型である必要があります。
+配列の要素の型は、**基本データ型と参照型どちらも使うことができます**。
 
 ~~~java
 
 int[] a = {1,2,3,4,5};
 
-int[] b = new int[5];//�z��̐錾
+int[] b = new int[5];//配列の宣言
 for (int i = 0; i < b.length; i++) {
-    b[i] = i+1; // �C���f�b�N�Xi���Ƃ�i+1�̒l����
+    b[i] = i+1; // インデックスiごとにi+1の値を代入
 }
 int[] c = new int[]{1,2,3,4,5};
 
@@ -30,19 +30,19 @@ System.out.println(c[2]);
 ~~~
 
 ~~~java
-���s���ʁF
+実行結果：
 1
 2
 3
 ~~~
 
-�z��͐錾�E���������i�K�ŁA�z��̊e�v�f�ɗ\�ߏ����l���ݒ肳��܂��B���̂��߃R���p�C���G���[�ɂȂ�܂���B�����l�́A�z��̌^�ɂ��قȂ�܂��B
+配列は宣言・生成した段階で、配列の各要素に予め初期値が設定されます。そのためコンパイルエラーになりません。初期値は、配列の型により異なります。
 
-|�z��^|�����l|
+|配列型|初期値|
 |--|--|
-|int�Ȃǂ̐��l�^|0|
+|intなどの数値型|0|
 |boolean|false|
-|�Q�ƌ^|null|
+|参照型|null|
 
 ~~~java
 int[] a = new int[10];
@@ -52,13 +52,13 @@ System.out.println(b[9]);
 ~~~
 
 ~~~java
-���s���ʁF
+実行結果：
 0
 null
 ~~~
 
-���̂悤�ɁA�z��ɑ΂��ėv�f�����傫���C���f�b�N�X�ɃA�N�Z�X���悤�Ƃ����
-`ArrayIndexOutOfBoundsException`���������܂�
+次のように、配列に対して要素数より大きいインデックスにアクセスしようとすると
+`ArrayIndexOutOfBoundsException`が投げられます
 
 ~~~java
 int[] a = new int[]{1,2,3,4,5};
@@ -69,7 +69,7 @@ System.out.println(a[5]);
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5 
 ~~~
 
-�܂��A�z��̗v�f�̐�����**length�t�B�[���h**����擾���邱�Ƃ��ł��܂��B
+また、配列の要素の数をは**lengthフィールド**から取得することができます。
 
 ~~~java
 String[] str = new String[]{"Red" , "Green" , "Blue"};
@@ -79,22 +79,22 @@ System.out.println(arr.length);
 ~~~
 
 ~~~java
-���s���ʁF
+実行結果：
 3
 10
 ~~~
 
-## 6.2. �������z��
+## 6.2. 多次元配列
 
-�z��̗v�f�Ƃ��Ĕz����������Ƃ��ł��܂��B
-2�����z��̏ꍇ��
+配列の要素として配列を扱うこともできます。
+2次元配列の場合は
 
 ~~~java
-�v�f�^[][] �ϐ��� = new �v�f�^[�z��T�C�Y][�z��T�C�Y];
-�v�f�^[][] �ϐ��� = new �v�f�^[][]{�v�f0,�v�f1..}{�v�f0,�v�f1..};
+要素型[][] 変数名 = new 要素型[配列サイズ][配列サイズ];
+要素型[][] 変数名 = new 要素型[][]{要素0,要素1..}{要素0,要素1..};
 ~~~
 
-�Ɛ錾���܂�
+と宣言します
 
 ~~~java
 
@@ -110,11 +110,9 @@ System.out.println(p[3][2]);
 ~~~
 
 ~~~java
-���s���ʁF
+実行結果：
 3
 14
 ~~~
-
-## 6.3. ArrayList
 
 
