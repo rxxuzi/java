@@ -1,5 +1,6 @@
 # densantext-java
 このテキストは2~3年生向けにjavaの説明をしています
+Chapter 10以降は比較的難しい内容となっています
 
 + Chpater 0 基本について
 + Chpater 1 変数と型
@@ -11,3 +12,4 @@
 + Chpater 7 標準入力
 + Chpater 8 メソッドとクラス
 + Chpater 9 コレクション
++ Chapter 10 継承
