@@ -170,11 +170,11 @@ switch文とswitch式の違いはswitch式は値を返さないのに対し、sw
 
 ~~~java
 
-var 変数n = swicth(式){
-    case 値1 -> 変数nに代入する値;
-    case 値1 -> 変数nに代入する値;
-    case 値1 -> 変数nに代入する値;
-    case 値1 -> 変数nに代入する値;
-    default -> どの値とも一致しなかったときに変数nに代入する値;
+var n = swicth(式){
+    case 値1 -> nに代入する値;
+    case 値2 -> nに代入する値;
+    case 値3 -> nに代入する値;
+    case 値4 -> nに代入する値;
+    default -> どの値とも一致しなかったときにnに代入する値;
 }
 ~~~
