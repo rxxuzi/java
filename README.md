@@ -3,7 +3,7 @@
 
 Chapter 10以降は比較的難しい内容となっています
 
-+ Chpater 0 基本について
++ Chpater 0 基本
 + Chpater 1 変数と型
 + Chpater 2 演算子
 + Chpater 3 制御文
@@ -11,6 +11,9 @@ Chapter 10以降は比較的難しい内容となっています
 + Chpater 5 例外処理
 + Chpater 6 配列
 + Chpater 7 標準入力
-+ Chpater 8 メソッドとクラス
++ Chpater 8 メソッドとクラスとパッケージ
 + Chpater 9 コレクション
 + Chapter 10 継承
++ Chapter 11 インターフェース 
++ Chapter 12 ガーベッジコレクション
++ Chapter 13 スレッド
