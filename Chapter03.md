@@ -156,7 +156,7 @@ System.out.println(a);
 int b = 20
 int a = b > 15 ? 10 : -10;
 System.out.println(a);
-```
+~~~
 
 ~~~java
 実行結果：
