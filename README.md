@@ -15,5 +15,5 @@ Chapter 10以降は比較的難しい内容となっています
 + Chpater 9 コレクション
 + Chapter 10 継承
 + Chapter 11 インターフェースと抽象クラス
-+ Chapter 12 ガーベッジコレクション
++ Chapter 12 修飾子
 + Chapter 13 スレッド
