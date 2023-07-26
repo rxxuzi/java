@@ -105,6 +105,11 @@ interface インターフェース名{
     //フィールド定義 (定数)
     //メソッド定義  (抽象メソッド)
 }
+
+interface インターフェース名 extends 親インターフェース1, 親インターフェース2{
+    //フィールド定義 (定数)
+    //メソッド定義  (抽象メソッド)
+}
 ~~~
 
 以下はインターフェースの実装例です
@@ -116,4 +121,38 @@ class クラス名 implements インターフェース名{
 
 クラスの継承では`extends`を使い、インターフェースの実装では`implemntes`を使います。
 
+### 11.2.2. インターフェースでのメソッド定義
+
+インターフェース内で定義するメソッドは処理の本体を記述することができません.
+
+ただ、Java8からインターフェースに`static メソッド`と`default`メソッドを定義することができます
+また、`static メソッド`はオーバーライドできない事に注意してください
+
+~~~java
+
+public class Main implements InterfaceSample {
+   public static void main(String[] args) {
+      Main main = new Main();
+      // static method
+      System.out.println(InterfaceSample.greet());
+      // default method
+      System.out.println(main.get());
+
+   }
+}
+interface InterfaceSample{
+   default String get(){
+      return "Hello";
+   }
+   static String greet(){
+      return "Hi ! ";
+   }
+}
+~~~
+
+~~~text
+出力:
+Hi ! 
+Hello
+~~~
 
