@@ -1,96 +1,58 @@
-# 12 スレッド
+# 12 修飾子
 
-Javaはマルチスレッドプログラミングをサポートしており、複数のスレッドを同時に実行できるようになっています。
+修飾子は、クラス、メソッド、フィールド、インターフェース、およびその他の要素の定義に使用されます。
+使用方法は、要素の定義時に修飾子をキーワードとして指定することで行われます。
 
-スレッドは、**プロセス内で独立した実行フローを持つ軽量のタスク**です。複数のスレッドを使用することで、マルチコアプロセッサの性能を最大限に活用し、タスクを並列で実行することができます。
+## 12.1. アクセス修飾子（Access Modifiers）
 
-## 12.1.　実装
++ `public`: 他のクラスからアクセス可能
++ `protected`: 同一パッケージ内とサブクラスからアクセス可能
++ `default` (package-private): 同一パッケージ内からのみアクセス可能
++ `private`: 同一クラス内からのみアクセス可能
 
-Javaでスレッドを操作するためには、主に`Thread`クラスを使う方法と`Runnable`インターフェースを使うの2つの方法があります：
+## 12.2. クラス・メソッド・フィールドのその他の修飾子
 
-### 12.1.1. `Thread`クラスを直接使用する方法
++ `static`: クラスレベルの修飾子。クラスに属し、インスタンスを生成せずに使用可能。
++ `final`: 変更不可。クラスの場合は継承不可、メソッドの場合はオーバーライド不可、フィールドの場合は再代入不可。
++ `abstract`: 抽象クラスまたは抽象メソッドを示す。インスタンス化不可で、派生クラスで具象化される必要がある。
++ `synchronized`: マルチスレッド環境での同期を保証するために使用される。
++ `transient`: シリアライズ（オブジェクトの状態を保存）時にフィールドの対象外とする。
++ `volatile`: マルチスレッド環境での変数のキャッシュを禁止し、直接メモリを読み書きする。
++ `native` : メソッド修飾子。cやcppで書かれた関数（ネイティブメソッド）を呼び出すことができる。
 
-Javaでは`Thread`クラスを拡張して新しいスレッドを作成します。以下は、この方法でスレッドを作成する例です。
+## 12.3. インターフェース関連の修飾子
 
-```java
-public class MyThread extends Thread {
-    @Override
-    public void run() {
-        // スレッドで実行したい処理を記述
-    }
-}
-// スレッドの起動
-MyThread thread = new MyThread();
-thread.start(); // スレッドの実行開始
-```
++ `default`: インターフェース内のメソッドのデフォルト実装を提供する。
++ `static`: インターフェース内のメソッドを静的メソッドにする。
++ `private`: インターフェース内でのみ使用可能なプライベートメソッドを定義する。
 
-この方法では、`run()`メソッドにスレッドで実行したい処理を記述します。`start()`メソッドを呼び出すことで、新しいスレッドが作成されて`run()`メソッドが実行されます。
+## 12.4. メソッド引数の修飾子
 
-### 12.1.2. `Runnable`インタフェースを実装する方法
++ `final`: メソッド内で引数の値を変更できなくする。
 
-`Runnable`インタフェースは、スレッドが実行するためのタスクを表すために使用されます。以下は、この方法でスレッドを作成する例です。
+## 12.5. ジェネリクス関連の修飾子
 
-```java
-public class MyRunnable implements Runnable {
-    @Override
-    public void run() {
-        // スレッドで実行したい処理を記述
-    }
-}
++ `extends`: ジェネリクスの上限境界を定義する。クラスまたはインターフェースを指定して制約を設ける。
++ `super`: ジェネリクスの下限境界を定義する。クラスを指定して制約を設ける。
 
-// スレッドの起動
-MyRunnable myRunnable = new MyRunnable();
-Thread thread = new Thread(myRunnable);
-thread.start(); // スレッドの実行開始
-```
+## 12.6. ファイナルクラスの修飾子
 
-この方法では、`run()`メソッドにスレッドで実行したい処理を記述します。そして、`Thread`クラスのコンストラクタに`Runnable`インタフェースを実装したオブジェクトを渡して新しいスレッドを作成します。
++ `strictfp`: 浮動小数点演算の正確性を保証する（通常の浮動小数点演算とは異なる場合がある）。
 
-## 12.2.　注意点
+## 12.7. 一覧
 
-- スレッドは並行処理を行うため、同じリソースに対して複数のスレッドからアクセスされる可能性があります。そのため、適切な同期処理を行わないとデータの競合や不整合が発生することがあります。
-- `Thread`クラスの`run()`メソッドではなく、`start()`メソッドを使用してスレッドを実行する必要があります。`run()`メソッドを直接呼び出すと、新しいスレッドが作成されず、単なるメソッド呼び出しになってしまいます。
-- スレッドはリソースを消費するため、過剰にスレッドを作成するとパフォーマンスが低下する可能性があります。必要な数のスレッドを適切に管理することが重要です。
+|修飾子 | クラス| インターフェース | メソッド | コンストラクタ | ブロック | 変数 | 説明 | 
+|---|---|---|---|---|---|---|---|---|
+|public |○| ○| ○| ○| ×| ○| アクセス修飾子|
+|protected |○| ○| ○| ○| ×| ○| アクセス修飾子|
+|private |○| ○| ○| ○| ×| ○| アクセス修飾子|
+|static |○| ○| ○| ×| ×| ○| スタティック修飾子|
+|final |○| ×| ○| ×| ×| ○| ファイナル修飾子|
+|abstract| ○| ○| ○| ×| ×| ×| 抽象修飾子|
+|native |×| ×| ○| ×| ×| ×| ネイティブ修飾子|
+|synchronized| ×| ×| ○| ×| ○| ×| 同期修飾子|
+|transient |×| ×| ×| ×| ×| ○| 一時的修飾子|
+|volatile| ×| ×| ×| ×| ×| ○| 揮発性修飾子|
+|strictfp |○| ○| ○| ×| ×| ×| 厳密浮動小数修飾子|
 
-## 12.3.サンプルコード
-
-以下のサンプルコードは1から100までの数を2つのスレッドで同時に合計するプログラムです。
-
-```java
-public class ParallelProcessingSample {
-   private static final int MAX_NUMBER = 100; // 上限
-   private static final int HALF_NUMBER = MAX_NUMBER / 2;
-   private static volatile int sum = 0; // volatileキーワードを使ってスレッド間の可視性を保証
-
-   public static void main(String[] args) {
-      // 2つのスレッドを作成して処理を並列実行
-      Thread thread1 = new Thread(() -> sumNumbersInRange(1, HALF_NUMBER));
-      Thread thread2 = new Thread(() -> sumNumbersInRange((HALF_NUMBER + 1),  MAX_NUMBER));
-
-      thread1.start(); // スレッド1の実行開始
-      thread2.start(); // スレッド2の実行開始
-
-      // 両スレッドの終了を待つ
-      try {
-         thread1.join();
-         thread2.join();
-      } catch (InterruptedException e) {
-         e.printStackTrace();
-      }
-
-      // 合計値を表示
-      System.out.println("合計: " + sum); //5050
-   }
-
-   private static void sumNumbersInRange(int start, int end) {
-      int localSum = 0;
-      for (int i = start; i <= end; i++) {
-         localSum += i;
-      }
-      // 各スレッドの合計値を全体の合計値に追加
-      synchronized (ParallelProcessingSample.class) {
-         sum += localSum;
-      }
-   }
-}
-``````
+>引用<https://www.tohoho-web.com/java/modifier.htm>
